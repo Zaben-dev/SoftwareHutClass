@@ -32,13 +32,13 @@ Przy iterowaniu po tablicach warto używać metody .map() która wykonuje na
 każdym elemencie tablicy wskazaną operacje i zwraca nową tablicę.
 
 Pętle można zapisywać na różne sposoby np. standardowe for (let i = 0; i < 10; i++),
-.forEach() które przyjmuję funkcje jako argument, z użyciem for in, np. 
+.forEach() które przyjmuje funkcje jako argument, z użyciem for in, np. 
 for (let a in obj).
 
 Funkcje można zapisywać na 3 sposoby:
 deklaracja funkcji - przykładowo function add(a, b){return a+b}, taki zapis jest hoistowany.
 wyrażenie funkcyjne przykładowo const add = function(a, b){return a+b}, nie jest hoistowany. 
-Zmienna add zawiera referencję do funkcji. Tutaj można pominąć nazwę i stworzyć funckję anonimową
+Zmienna add zawiera referencję do funkcji. Tutaj można pominąć nazwę i stworzyć funkcje anonimową
 np. function add{}. 
 funkcje strzałkowe - przykładowo const add = (a, b) => {return a+b}. Również można tworzyć 
 funkcje anonimowe. Można też stosować skrócony zapis zapis np. (a, b) => a + b bez klamr i 
