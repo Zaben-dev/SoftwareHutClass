@@ -1,0 +1,46 @@
+W JavaScript są dostępne 3 rodzaje zmiennych - var, let i const.
+najważniejsze różnice to zasięg.
+Var - jest dostępna w obrębie zadeklarowanej funkcji, lub globalnie. Należy unikać
+jej stosowania.
+let - jest dostępna w obrębie bloku, tak jak w większości języków programowania.
+const działa podobnie do let, różnica jest taka że nie można zmienić wartości, gdy ją
+raz zadeklarujemy. Służy do zapisywania stałych.
+Są też między nimi rożnice w hoistingu.
+
+Typy zmiennych w jsie to:
+number - liczby, warto uważać przy różnych operacjach matematycznych bo czasami są
+nieprzewidywalne
+string - tekst w cudzysłowiu pojedynczym lub podwójnym, lub z użyciem template string,
+ czyli `` oraz znaki $ do zmiennych
+boolean - true lub false
+null - oznacza "nic"
+undefined - gdy wartość jest niezdefiniowana np. zmienna bez wartości
+
+typy złożone - są typem Object, moga być standardowym obiektem lub tablicą itp.
+
+Można porównywać zmienne z użyciem == (porównywana tylko wartość, kompilator może 
+sobie przekonwertować) lub === (porównywana wartość i typ, kompilator nie przekonwertuje).
+
+Trik: "" == false, można sprawdzić w ten sposób czy string jest pusty. 
+
+przydatne są różne metody którymi można operować na zmiennych.
+przykładowo .slice() czyli przycinanie, toLowerCase() lub toUpperCase() czyli zmiana
+wielkości liter, oraz wiele innych.
+
+W tablicy można przechowywać zmienne o różnych typach np. let arr = [1 , "tekst", true].
+Przy iterowaniu po tablicach warto używać metody .map() która wykonuje na 
+każdym elemencie tablicy wskazaną operacje i zwraca nową tablicę.
+
+Pętle można zapisywać na różne sposoby np. standardowe for (let i = 0; i < 10; i++),
+.forEach() które przyjmuję funkcje jako argument, z użyciem for in, np. 
+for (let a in obj).
+
+Funkcje można zapisywać na 3 sposoby:
+deklaracja funkcji - przykładowo function add(a, b){return a+b}, taki zapis jest hoistowany.
+wyrażenie funkcyjne przykładowo const add = function(a, b){return a+b}, nie jest hoistowany. 
+Zmienna add zawiera referencję do funkcji. Tutaj można pominąć nazwę i stworzyć funckję anonimową
+np. function add{}. 
+funkcje strzałkowe - przykładowo const add = (a, b) => {return a+b}. Również można tworzyć 
+funkcje anonimowe. Można też stosować skrócony zapis zapis np. (a, b) => a + b bez klamr i 
+słowa return. React pozwala na szybkie zwrócenie obiektu, (a, b) => ({sum: a+b}) klamry musimy
+otoczyć nawiasami, wtedy jest to traktowane jako zwracany obiekt.
