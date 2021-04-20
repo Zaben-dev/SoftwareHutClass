@@ -1,1 +1,1 @@
-#Notatki z wykładu 2 
+# Notatki z wykładu 2 
