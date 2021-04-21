@@ -52,10 +52,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <Button name={"+"} color={"primary"} onClick={handleAdd} />
+      <Button name={"Dodaj"} color={"primary"} onClick={handleAdd} />
+      <Button name={"Reset"} color={"default"} onClick={handleReset} />
+      <Button name={"Odejmij"} color={"secondary"} onClick={handleDecrement} />
       {counterView()}
-      <Button name={"-"} color={"secondary"} onClick={handleDecrement} />
-      <Button name={"Reset"} color={"primary"} onClick={handleReset} />
     </div>
   );
 };
