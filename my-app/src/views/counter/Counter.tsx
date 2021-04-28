@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import NavPanel from "../../components/NavPanel";
-import Button from "../../button";
+import Button from "../../components/Button";
 
 const Counter = () => {
   const [counter, setCounter] = useState(0);
@@ -46,9 +46,6 @@ const Counter = () => {
       return <p>Liczba większa od 15. Zresetuj liczbę.</p>;
     }
   };
-
-  // większy od 10 mniejszy od 10
-  // gdy większa od 15 chować counter i że przekroczył.
 
   return (
     <div>
