@@ -24,14 +24,4 @@ const App = () => {
   );
 };
 
-// return (
-//   <div className="App">
-//     <Button name={"Dodaj"} color={"primary"} onClick={handleAdd} />
-//     <Button name={"Reset"} color={"default"} onClick={handleReset} />
-//     <Button name={"Odejmij"} color={"secondary"} onClick={handleDecrement} />
-//     {counterView()}
-//   </div>
-// );
-//};
-
 export default App;
