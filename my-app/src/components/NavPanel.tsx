@@ -5,10 +5,31 @@ import { useHistory } from "react-router";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
-  drawer: {},
   menuIcon: {
+    position: "fixed",
+    top: "30px",
+    left: "30px",
     cursor: "pointer",
-    display: "flex",
+  },
+  menuWrapper: {
+    height: "100%",
+    fontSize: "25px",
+  },
+  ulList: {
+    listStyleType: "none",
+    margin: "30px",
+    padding: 0,
+  },
+  liItem: {
+    marginBottom: "20px",
+    padding: "10px",
+    textAlign: "center",
+    cursor: "pointer",
+    borderRadius: "12px",
+    transition: ".2s",
+    "&:hover": {
+      backgroundColor: "grey",
+    },
   },
 });
 const NavPanel = () => {
@@ -31,21 +52,22 @@ const NavPanel = () => {
   return (
     <div>
       <div className={classes.menuIcon} onClick={() => setIsOpen(!isOpen)}>
-        <MenuIcon />
+        <MenuIcon fontSize={"large"} />
       </div>
       <Drawer
         open={isOpen}
         onClose={() => {
           setIsOpen(false);
         }}
-        className={classes.drawer}
       >
-        <div>
-          <ul>
-            <li>{redirectTo("/", "Home")}</li>
-            <li>{redirectTo("/counter", "Counter")}</li>
-            <li>{redirectTo("/joke", "Jokes")}</li>
-            <li>{redirectTo("/quote", "Quotes")}</li>
+        <div className={classes.menuWrapper}>
+          <ul className={classes.ulList}>
+            <li className={classes.liItem}>{redirectTo("/", "Home")}</li>
+            <li className={classes.liItem}>
+              {redirectTo("/counter", "Counter")}
+            </li>
+            <li className={classes.liItem}>{redirectTo("/joke", "Jokes")}</li>
+            <li className={classes.liItem}>{redirectTo("/quote", "Quotes")}</li>
           </ul>
         </div>
       </Drawer>
