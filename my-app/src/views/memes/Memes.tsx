@@ -1,13 +1,12 @@
 import React from 'react';
-
 import NavPanel from '../../components/NavPanel';
 
-const Home = () => {
+const Memes = () => {
   return (
     <div>
       <NavPanel />
-      <h1>Strona domowa.</h1>
+      <div>This is memes</div>
     </div>
   );
 };
-export default Home;
+export default Memes;
