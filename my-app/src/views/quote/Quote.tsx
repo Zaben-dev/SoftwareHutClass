@@ -11,7 +11,7 @@ import { getQuote, Tag } from "../../services/quote";
 import NavPanel from "../../components/NavPanel";
 
 const useStyles = makeStyles({
-  jokeCointainer: {
+  quoteCointainer: {
     marginRight: "30%",
     borderRight: "2px solid black",
     marginLeft: "30%",
@@ -75,7 +75,7 @@ const Quote = () => {
       </Button>
       <br />
       <br />
-      <div className={classes.jokeCointainer}>
+      <div className={classes.quoteCointainer}>
         <p>{quote.content}</p>
         <p>{quote.author}</p>
       </div>

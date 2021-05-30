@@ -1,19 +1,19 @@
-import React from "react";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
+import React from 'react';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
 
-import Counter from "./views/counter/Counter";
-import Home from "./views/home/Home";
-import Quote from "./views/quote/Quote";
-import Joke from "./views/joke/Joke";
-import Memes from "./views/memes/Memes";
-import Footer from "./components/Footer";
+import Counter from './views/counter/Counter';
+import Home from './views/home/Home';
+import Quote from './views/quote/Quote';
+import Joke from './views/joke/Joke';
+import Space from './views/space/Space';
+import Footer from './components/Footer';
 
 const useStyles = makeStyles({
   appWrapper: {
-    maxWidth: "100vw",
-    maxHeight: "100vh",
-    textAlign: "center",
+    maxWidth: '100vw',
+    maxHeight: '100vh',
+    textAlign: 'center',
   },
 });
 
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/counter" component={Counter} />
           <Route path="/joke" component={Joke} />
           <Route path="/quote" component={Quote} />
-          <Route path="/memes" component={Memes} />
+          <Route path="/space" component={Space} />
           <Route path="/" component={Home} exact />
           <Route />
         </Switch>
