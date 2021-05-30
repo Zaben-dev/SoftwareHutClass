@@ -9,8 +9,6 @@ import Joke from './views/joke/Joke';
 import Space from './views/space/Space';
 import Footer from './components/Footer';
 
-import './App.css';
-
 const useStyles = makeStyles({
   appWrapper: {
     maxWidth: '100vw',
