@@ -1,21 +1,36 @@
-import React, { useState } from 'react';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
+import React, { useState } from "react";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormHelperText from "@material-ui/core/FormHelperText";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
 
-import { getJoke, Category } from '../../services/jokes';
-import NavPanel from '../../components/NavPanel';
+import { getJoke, Category } from "../../services/jokes";
+import NavPanel from "../../components/NavPanel";
+import { blue } from "@material-ui/core/colors";
 
-// ostylować przycisk (dać go trochę w dół) i jakieś marginesy do wszystkiego żeby wyglądało xD
-
+const useStyles = makeStyles({
+  jokeCointainer: {
+    marginRight: "30%",
+    borderRight: "2px solid black",
+    marginLeft: "30%",
+    borderLeft: "2px solid black",
+  },
+  buttonGen: {
+    fontWeight: "bold",
+    margin: "5px",
+  },
+  bodyStyle: {
+    fontFamily: "Roboto, sans-serif",
+  },
+});
 const Joke = () => {
   const [inputValue, setInputValue] = useState(Category.General);
   const [joke, setJoke] = useState({
-    setup: '',
-    punchline: '',
+    setup: "",
+    punchline: "",
   });
 
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
@@ -32,10 +47,13 @@ const Joke = () => {
     });
   };
 
+  const classes = useStyles();
   return (
-    <div>
+    <div className={classes.bodyStyle}>
       <NavPanel />
-      <h1>Jokes generator</h1>
+      <h1>
+        <u>JOKES GENERATOR</u>
+      </h1>
       <FormControl>
         <InputLabel>Joke category</InputLabel>
         <Select value={inputValue} onChange={handleChange}>
@@ -44,10 +62,18 @@ const Joke = () => {
         </Select>
         <FormHelperText>Please choose joke category</FormHelperText>
       </FormControl>
-      <Button variant="contained" color="primary" onClick={newJoke}>
+      <br />
+      <Button
+        className={classes.buttonGen}
+        variant="contained"
+        color="primary"
+        onClick={newJoke}
+      >
         Generate
       </Button>
-      <div>
+      <br />
+      <br />
+      <div className={classes.jokeCointainer}>
         <p>{joke.setup}</p>
         <p>{joke.punchline}</p>
       </div>
