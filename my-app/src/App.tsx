@@ -6,7 +6,7 @@ import Counter from './views/counter/Counter';
 import Home from './views/home/Home';
 import Quote from './views/quote/Quote';
 import Joke from './views/joke/Joke';
-import Memes from './views/memes/Memes';
+import Space from './views/space/Space';
 import Footer from './components/Footer';
 
 import './App.css';
@@ -28,7 +28,7 @@ const App = () => {
           <Route path="/counter" component={Counter} />
           <Route path="/joke" component={Joke} />
           <Route path="/quote" component={Quote} />
-          <Route path="/memes" component={Memes} />
+          <Route path="/space" component={Space} />
           <Route path="/" component={Home} exact />
           <Route />
         </Switch>

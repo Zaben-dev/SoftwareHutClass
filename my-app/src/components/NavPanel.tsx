@@ -66,7 +66,7 @@ const NavPanel = () => {
             <li className={classes.liItem}>
               {redirectTo('/counter', 'Counter')}
             </li>
-            <li className={classes.liItem}>{redirectTo('/memes', 'Memes')}</li>
+            <li className={classes.liItem}>{redirectTo('/space', 'Space')}</li>
             <li className={classes.liItem}>{redirectTo('/joke', 'Jokes')}</li>
             <li className={classes.liItem}>{redirectTo('/quote', 'Quotes')}</li>
           </ul>
